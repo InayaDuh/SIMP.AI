@@ -58,3 +58,8 @@ body{
         color:rgb(0, 93, 93);
     }
 }
+#result{
+    text-align: center;
+    color:rgb(213, 224, 227);
+    font-weight: 900;
+}

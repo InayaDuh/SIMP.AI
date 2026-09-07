@@ -9,6 +9,114 @@
 <body id="questions-page">
  <h1>Welcome to SIMP.AI!</h1>
  <p>We are excited to have you here! Please answer a few questions to find your perfect day!</p>  
-
+<h2>Question 1: What is your favorite type of weather?</h2>
+    <form id="question-form">
+        <label for="weather">Choose an option:</label>
+        <select id="weather" name="weather">
+            <option value="sunny">Sunny</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+            <option value="cloudy">Cloudy</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <h2>Question 2: What is your favorite type of music?</h2>
+    <form id="music-form">
+        <label for="music">Choose an option:</label>
+        <select id="music" name="music">
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="classical">Classical</option>
+            <option value="jazz">Jazz</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="music-result"></div>
+    <h2>Question 3: What is your favorite type of food?</h2>
+    <form id="food-form">
+        <label for="food">Choose an option:</label>
+        <select id="food" name="food">
+            <option value="italian">Italian</option>
+            <option value="mexican">Mexican</option>
+            <option value="chinese">Chinese</option>
+            <option value="indian">Indian</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="food-result"></div>
+    <h2>Question 4: What is your favorite type of activity?</h2>
+    <form id="activity-form">
+        <label for="activity">Choose an option:</label>
+        <select id="activity" name="activity">      
+            <option value="sports">Sports</option>
+            <option value="reading">Reading</option>
+            <option value="traveling">Traveling</option>
+            <option value="gaming">Gaming</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="sports-result"></div>
+    <h2>Question 5: What is your favorite type of movie?</h2>
+    <form id="movie-form">
+        <label for="movie">Choose an option:</label>
+        <select id="movie" name="movie">
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="horror">Horror</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="movie-result"></div>
+    <h2>Question 6: What how social are you?</h2>
+    <form id="social-form">
+        <label for="social">Choose an option:</label>
+        <select id="social" name="social">
+            <option value="very-social">Very Social</option>
+            <option value="somewhat-social">Somewhat Social</option>
+            <option value="not-social">Not Social</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="social-result"></div>
+    <h2>Question 7: What is your favorite type of pet?</h2>
+    <form id="pet-form">
+        <label for="pet">Choose an option:</label>
+        <select id="pet" name="pet">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="fish">Fish</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="pet-result"></div>
+    <h2>Question 8: What is your favorite type of vacation?</h2>
+    <form id="vaccation-form">
+        <label for="vaccation">Choose an option:</label>
+        <select id="vaccation" name="vaccation">
+            <option value="beach">Beach</option>
+            <option value="mountains">Mountains</option>
+            <option value="city">City</option>
+            <option value="countryside">Countryside</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="vaccation-result"></div>
+    <button id="show-answers-button">Show Answers</button>
+    <div id="answers-container" style="display: none;">
+        <h2>Your Answers:</h2>
+        <ul id="answers-list"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
