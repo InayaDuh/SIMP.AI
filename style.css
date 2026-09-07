@@ -5,37 +5,56 @@ h1{
     text-align: center;
     font-size: 100px;
     margin: 0px;
-   
- 
+    color:rgb(0, 31, 40);
+   font-weight: bold;
 }
 h2{
     text-align: center;
     font-size : 30px; 
     margin: 0px;
+    color:rgb(0, 31, 40);
+    font-weight: 900;
 }
 p{
     text-align: center;
+    color:rgb(0, 31, 40);
+    font-weight: 900;
 }
 button{
     display: block;
     margin: auto;
     padding: 15px 30px;
     border-radius: 10px;
-    background-color: rgb(215, 183, 224);
-    color:darkblue;
+    color:rgb(253, 253, 254);
     border: none;
     transition: 1s;
+    background-image:url(./image.png/WATER.jpeg);
+    background-size: cover;
 }
 button:hover{
-    background-color: rgb(128, 111, 230);
     cursor: pointer;
+    background-image:url(./image.png/star\ button.jpeg);
+    background-size: cover;
 }
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: url(./image.png/star.jpeg);
+    background-size: cover;
+;
 }
 #question-bank{
     text-align: center;
+}
+#questions-page{
+    background-image:url(./image.png/Earth.jpeg);
+    background-size: cover;
+    h1{
+        color:antiquewhite;
+    }
+    p{
+        color:rgb(255, 255, 255);
+    }
 }
