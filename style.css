@@ -52,9 +52,9 @@ body{
     background-image:url(./image.png/Earth.jpeg);
     background-size: cover;
     h1{
-        color:antiquewhite;
+        color:rgb(104, 85, 59);
     }
     p{
-        color:rgb(255, 255, 255);
+        color:rgb(0, 93, 93);
     }
 }
