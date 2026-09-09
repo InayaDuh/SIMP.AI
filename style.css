@@ -5,20 +5,23 @@ h1{
     text-align: center;
     font-size: 100px;
     margin: 0px;
-    color:rgb(0, 31, 40);
+    color:rgb(0, 0, 0);
    font-weight: bold;
+   font-family:cursive
 }
 h2{
     text-align: center;
     font-size : 30px; 
     margin: 0px;
-    color:rgb(0, 31, 40);
+    color:rgb(0, 0, 0);
     font-weight: 900;
+    font-family:cursive
 }
 p{
     text-align: center;
-    color:rgb(0, 31, 40);
+    color:rgb(0, 0, 0);
     font-weight: 900;
+    font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 button{
     display: block;
@@ -31,10 +34,54 @@ button{
     background-image:url(./image.png/WATER.jpeg);
     background-size: cover;
 }
+button{
+    animation:pulseButton 2s infinite;
+}
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 button:hover{
     cursor: pointer;
-    background-image:url(./image.png/star\ button.jpeg);
+    background-image:url(./image.png/starblue.jpeg);
     background-size: cover;
+}
+#questions-page button:not(#show-answers-button){
+    background-image:url(./image.png/butterfly.jpeg);
+    background-size: cover;
+    animation:floatButton 2s infinite;
+}
+@keyframes floatButton {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+#questions-page button:hover{
+    background-image:url(./image.png/white.jpeg);
+    background-size: cover;
+    transition: 1s;
+} 
+#show-answers-button {
+    background-image:url(./image.png/brown.jpeg)!important;
+    background-size: cover;
+}  
+#show-answers-button:hover {
+    background-image:url(./image.png/Earth.jpeg)!important;
+    background-size: cover;
+    transition: 1s;
 }
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -49,17 +96,36 @@ body{
     text-align: center;
 }
 #questions-page{
-    background-image:url(./image.png/Earth.jpeg);
+    background-image:url(./image.png/yellow\ star.jpeg);
     background-size: cover;
     h1{
         color:rgb(104, 85, 59);
     }
     p{
-        color:rgb(0, 93, 93);
+        color:rgb(0, 0, 0);
     }
 }
-#result{
+#result,#movie-result,#food-result,#activity-result,#music-result,#social-result,#pet-result,#vaccation-result,#sports-result{
     text-align: center;
-    color:rgb(213, 224, 227);
+    color:rgb(0, 0, 0);
     font-weight: 900;
+    font-family:cursive;
+}
+#questions-page label{
+    color:rgb(0, 0, 0);
+    font-weight: 900;
+}
+#questions-page select{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-image: url(./image.png/bow.jpeg);
+}
+#answers-container{
+    text-align: center;}
+    #answers-list p,#final-result,#perfect-day-plan{
+    color:rgb(0, 0, 0);
+    font-weight: 900;
+    font-family:cursive;
 }

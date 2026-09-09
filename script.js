@@ -197,12 +197,48 @@ if (questionForm) {
 	}
 	});
 }
+const finalResult = document.getElementById("final-result");
+const perfectDayPlan = document.getElementById("perfect-day-plan");
+function displayPerfectDayPlan() {
+	finalResult.style.display = "block";let recommendation="";
+	if(answers.weather ==="sunny") {
+		recommendation += "Enjoy the sunshine and have a picnic in the park! ";
+	} else if(answers.weather ==="rainy") {
+		recommendation += "Stay cozy indoors with a good book or movie! ";
+	} else if(answers.weather ==="cloudy") {
+		recommendation += "Take a leisurely walk and enjoy the calm atmosphere! ";
+	} else if(answers.weather ==="snowy") {
+		recommendation += "Build a snowman or have a snowball fight! ";
+	}
+	if(answers.music) {
+		recommendation += `Listen to some ${answers.music} music to set the mood! `;
+	}
+	if(answers.food) {
+		recommendation += `Treat yourself to some delicious ${answers.food}! `;
+	}
+	if(answers.activity) {
+		recommendation += `Engage in your favorite activity: ${answers.activity}. `;
+	}
+	if(answers.movie) {
+		recommendation += `Watch a ${answers.movie} movie to relax and unwind. `;
+	}
+	if(answers.social) {
+		recommendation += `Spend time with your ${answers.social} friends or family. `;
+	}
+	if(answers.pet) {
+		recommendation += `Enjoy some quality time with your ${answers.pet}. `;
+	}
+	if(answers.vaccation) {
+		recommendation += `Plan a trip to the ${answers.vaccation} for a perfect getaway! `;
+	}
+	perfectDayPlan.textContent = recommendation;	
+}
 		const showAnswersButton = document.getElementById("show-answers-button");
 		if (showAnswersButton) {
 			showAnswersButton.addEventListener("click", function () {
 				const answersContainer = document.getElementById("answers-container");
 				const answersList = document.getElementById("answers-list");
-				answersContainer.style.display = "block";
+				answersContainer.style.display = "block";displayPerfectDayPlan();
 				answersList.innerHTML = `
 					<p>Weather: ${answers.weather || "N/A"}</p>
 					<p>Music: ${answers.music || "N/A"}</p>
