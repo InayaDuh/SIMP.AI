@@ -5,21 +5,52 @@ h1{
     text-align: center;
     font-size: 100px;
     margin: 0px;
-    color:rgb(0, 0, 0);
+    background-image: url(./image.png/spi.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
    font-weight: bold;
-   font-family:cursive
+    -webkit-text-stroke: 2px black;
+   font-family:cursive;
+
+   animation:titlefloat 2s ease-in-out infinite;
+   
+}
+@keyframes titlefloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
 }
 h2{
     text-align: center;
     font-size : 30px; 
     margin: 0px;
-    color:rgb(0, 0, 0);
+   background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 900;
-    font-family:cursive
+    font-family:cursive;
 }
 p{
     text-align: center;
-    color:rgb(0, 0, 0);
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 900;
     font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -27,12 +58,17 @@ button{
     display: block;
     margin: auto;
     padding: 15px 30px;
-    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 25px;
     color:rgb(253, 253, 254);
     border: none;
     transition: 1s;
     background-image:url(./image.png/WATER.jpeg);
     background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    0 0 15px white;
 }
 button{
     animation:pulseButton 2s infinite;
@@ -52,6 +88,9 @@ button:hover{
     cursor: pointer;
     background-image:url(./image.png/starblue.jpeg);
     background-size: cover;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #questions-page button:not(#show-answers-button){
     background-image:url(./image.png/butterfly.jpeg);
@@ -72,7 +111,10 @@ button:hover{
 #questions-page button:hover{
     background-image:url(./image.png/white.jpeg);
     background-size: cover;
-    transition: 1s;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7)
+    0 0 15px white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 } 
 #show-answers-button {
     background-image:url(./image.png/brown.jpeg)!important;
@@ -90,10 +132,14 @@ body{
     justify-content: center;
     background-image: url(./image.png/star.jpeg);
     background-size: cover;
+    background-attachment: fixed
 ;
 }
 #question-bank{
     text-align: center;
+    background-image: url(./image.png/een.jpeg);
+    background-size: cover;
+    background-position: center;
 }
 #questions-page{
     background-image:url(./image.png/yellow\ star.jpeg);
@@ -107,19 +153,27 @@ body{
 }
 #result,#movie-result,#food-result,#activity-result,#music-result,#social-result,#pet-result,#vaccation-result,#sports-result{
     text-align: center;
-    color:rgb(0, 0, 0);
-    font-weight: 900;
-    font-family:cursive;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #questions-page label{
     color:rgb(0, 0, 0);
     font-weight: 900;
 }
 #questions-page select{
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 10px;
     margin: 10px;
-    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid white;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 25px;
     background-image: url(./image.png/bow.jpeg);
 }
 #answers-container{
@@ -129,3 +183,153 @@ body{
     font-weight: 900;
     font-family:cursive;
 }
+#game-menu{
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25),
+    0 0 15px white;
+backdrop-filter: blur(10px);
+    text-align: center;
+    margin: 50px auto;
+    animation: menuappear 2s ease-in-out;
+    background-image: url(./image.png/bluww.jpeg);
+}
+@keyframes menuappear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#introtext{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(253, 253, 254);
+    border: none;
+    transition: 1s;
+    background-color: black;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px white;
+}
+
+.question-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    width: 80%;
+    margin: 20px auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+   background-image: url(./image.png/luu.jpeg);
+}
+#final-result{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(253, 253, 254);
+    border: none;
+    transition: 1s;
+    padding: 15px 30px;
+    background:transparent;
+    border-radius: 25px;
+    background-image: url(./image.png/bluestar.jpeg);
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px white;
+    animation: rewardbutton 3s ease-in-out infinite;
+}
+@keyframes rewardbutton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@media (max-width:600px) {
+    h1{
+        font-size: 60px;
+    } 
+    .question-card {
+        width: 95%;
+        padding: 15px;
+    }
+}
+#ending-page{
+    background-image: url(./image.png/sky.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    text-align: center;
+}
+#ending-page h1{
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    ;
+    font-weight: 900;
+    font-style: cursive;
+    background-image: url(./image.png/swirl.jpeg);
+    -webkit-text-stroke: 2px black;
+    animation: titleofend 3s ease-in-out infinite;
+}
+@keyframes titleofend{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+#ending-page p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 900;
+    font-style: cursive;
+    background-color: black;
+    margin: auto;
+    text-shadow: 0 0 8px white;
+}
+#restart-button{
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: cursive;
+    letter-spacing: 2px;
+    font-weight: 900;
+    padding: 15px 35px;
+    border-radius: 30px;
+    background-image: url(./image.png/greenleaf.jpeg);
+    background-size: cover;
+    border-color: black;
+    box-shadow: rgba(0, 0, 0, 0.7);
+    animation: reverse 3s infinite;
+    display: block;
+}
+@keyframes reverse{
+     0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+#restart-button:hover{
+    transform: scale(1.15);
+    box-shadow: 0 0 20px white;
+    background-image: url(./image.png/white.jpeg);
+}
+

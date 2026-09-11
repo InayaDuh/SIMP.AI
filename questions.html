@@ -9,7 +9,8 @@
 <body id="questions-page">
  <h1>Welcome to SIMP.AI!</h1>
  <p>We are excited to have you here! Please answer a few questions to find your perfect day!</p>  
-<h2>Question 1: What is your favorite type of weather?</h2>
+<div class="question-card">
+ <h2>Question 1: What is your favorite type of weather?</h2>
     <form id="question-form">
         <label for="weather">Choose an option:</label>
         <select id="weather" name="weather">
@@ -22,6 +23,8 @@
         <button type="submit">Submit</button>
     </form>
     <div id="result"></div>
+</div>
+<div class="question-card">
     <h2>Question 2: What is your favorite type of music?</h2>
     <form id="music-form">
         <label for="music">Choose an option:</label>
@@ -35,6 +38,8 @@
         <button type="submit">Submit</button>
     </form>
     <div id="music-result"></div>
+    </div>
+    <div class="question-card">
     <h2>Question 3: What is your favorite type of food?</h2>
     <form id="food-form">
         <label for="food">Choose an option:</label>
@@ -48,6 +53,8 @@
         <button type="submit">Submit</button>
     </form>
     <div id="food-result"></div>
+    </div>
+   <div class="question-card">
     <h2>Question 4: What is your favorite type of activity?</h2>
     <form id="activity-form">
         <label for="activity">Choose an option:</label>
@@ -60,7 +67,9 @@
         <br><br>
         <button type="submit">Submit</button>
     </form>
-    <div id="sports-result"></div>
+    <div id="activity-result"></div>
+    </div>
+    <div class="question-card">
     <h2>Question 5: What is your favorite type of movie?</h2>
     <form id="movie-form">
         <label for="movie">Choose an option:</label>
@@ -74,18 +83,22 @@
         <button type="submit">Submit</button>
     </form>
     <div id="movie-result"></div>
-    <h2>Question 6: What how social are you?</h2>
+    </div>
+    <div class="question-card">
+    <h2>Question 6: How social are you?</h2>
     <form id="social-form">
         <label for="social">Choose an option:</label>
         <select id="social" name="social">
-            <option value="very-social">Very Social</option>
-            <option value="somewhat-social">Somewhat Social</option>
-            <option value="not-social">Not Social</option>
+            <option value="introvert">introvert</option>
+            <option value="ambivert">Ambivert</option>
+            <option value="extrovert">Extrovert</option>
         </select>
         <br><br>
         <button type="submit">Submit</button>
     </form>
     <div id="social-result"></div>
+    </div>
+    <div class="question-card">
     <h2>Question 7: What is your favorite type of pet?</h2>
     <form id="pet-form">
         <label for="pet">Choose an option:</label>
@@ -99,7 +112,9 @@
         <button type="submit">Submit</button>
     </form>
     <div id="pet-result"></div>
-    <h2>Question 8: What is your favorite type of vacation?</h2>
+    </div>
+    <div class="question-card">
+    <h2>Question 8: What is your favorite type of vaccation?</h2>
     <form id="vaccation-form">
         <label for="vaccation">Choose an option:</label>
         <select id="vaccation" name="vaccation">
@@ -110,8 +125,9 @@
         </select>
         <br><br>
         <button type="submit">Submit</button>
-    </form>
-    <div id="vaccation-result"></div>
+          </form>
+          <div id="vaccation-result"></div>
+        </div>  
     <button id="show-answers-button">Show Answers</button>
     <div id="answers-container" style="display: none;">
         <h2>Your Answers:</h2>

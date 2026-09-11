@@ -22,7 +22,7 @@ const food = document.getElementById("food");
 const foodResult = document.getElementById("food-result");
 const activityForm = document.getElementById("activity-form");
 const activity = document.getElementById("activity");
-const activityResult = document.getElementById("sports-result");
+const activityResult = document.getElementById("activity-result");
 const movieForm = document.getElementById("movie-form");
 const movie = document.getElementById("movie");
 const movieResult = document.getElementById("movie-result");
@@ -51,7 +51,7 @@ if (vaccationForm) {
 		else if (answer8 === "countryside") {
 		vaccationResult.textContent = "You are peaceful and enjoy the simplicity of life!";
 	} else {
-		vaccationResult.textContent = "Hmm, I'm not sure about that vacation preference. Please try again!";
+		vaccationResult.textContent = "Hmm, I'm not sure about that vaccation preference. Please try again!";
 	}
 	});
 }	
@@ -84,7 +84,7 @@ if (socialForm) {
 		if (answer6 === "introvert") {
 			socialResult.textContent = "You are reflective and enjoy spending time alone!";
 		} else if (answer6 === "extrovert") {
-		socialResult.textContent = "You are outgoing and enjoy being around others!";
+		socialResult.textContent = "You are friendly and enjoy spending time with others!";
 	} else if (answer6 === "ambivert") {
 		socialResult.textContent = "You have a balanced personality and enjoy both socializing and alone time.";
 	} 
@@ -128,8 +128,8 @@ if (activityForm) {
 	} else if (answer4 === "gaming") {
 		activityResult.textContent = "You are imaginative and enjoy exploring new worlds!";
 	} 
-		else if (answer4 === "cooking") {
-		activityResult.textContent = "You are creative and enjoy experimenting with new ideas!";
+		else if (answer4 === "traveling") {
+		activityResult.textContent = "You are adventurous and enjoy exploring new places!";
 	} else {
 		activityResult.textContent = "Hmm, I'm not sure about that activity. Please try again!";
 	}
@@ -141,15 +141,15 @@ if (foodForm) {
 		const answer3 = food.value;
 		answers.food = answer3;
 		console.log("User's answer:", playerFood);
-		if (answer3 === "pizza") {
-			foodResult.textContent = "You are fun-loving and enjoy the simple pleasures in life!";
-		} else if (answer3 === "sushi") {
-		foodResult.textContent = "You are sophisticated and appreciate the finer things in life!";
-	} else if (answer3 === "burger") {
-		foodResult.textContent = "You are laid-back and enjoy comfort and familiarity.";
+		if (answer3 === "italian") {
+			foodResult.textContent = "You are enjoy the comfort of familiar flavors and appreciate the art of cooking!";
+		} else if (answer3 === "mexican") {
+		foodResult.textContent = "You are spirited and enjoy bold, vibrant flavors!";
+	} else if (answer3 === "chinese") {
+		foodResult.textContent = "You are adventurous and enjoy trying new things!";
 	} 
-		else if (answer3 === "salad") {
-		foodResult.textContent = "You are health-conscious and value balance in your life!";
+		else if (answer3 === "indian") {
+		foodResult.textContent = "You are passionate and enjoy rich, flavorful experiences!";
 	} else {
 		foodResult.textContent = "Hmm, I'm not sure about that food choice. Please try again!";
 	}
@@ -238,7 +238,9 @@ function displayPerfectDayPlan() {
 			showAnswersButton.addEventListener("click", function () {
 				const answersContainer = document.getElementById("answers-container");
 				const answersList = document.getElementById("answers-list");
-				answersContainer.style.display = "block";displayPerfectDayPlan();
+				answersContainer.style.display = "block";displayPerfectDayPlan();setTimeout(function () {
+					window.location.href ="ending.html";
+				},5000);
 				answersList.innerHTML = `
 					<p>Weather: ${answers.weather || "N/A"}</p>
 					<p>Music: ${answers.music || "N/A"}</p>
@@ -250,4 +252,4 @@ function displayPerfectDayPlan() {
 					<p>Vaccation: ${answers.vaccation || "N/A"}</p>
 				`;
 			});
-		}			
+		}
