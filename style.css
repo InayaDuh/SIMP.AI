@@ -64,7 +64,7 @@ button{
     border-radius: 25px;
     color:rgb(253, 253, 254);
     border: none;
-    transition: 1s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-image 0.3s ease;
     background-image:url(./image.png/WATER.jpeg);
     background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
@@ -153,12 +153,23 @@ body{
 }
 #result,#movie-result,#food-result,#activity-result,#music-result,#social-result,#pet-result,#vaccation-result,#sports-result{
     text-align: center;
+    animation: responseApper 0.5s ease-in-out;
     background-color: black;
     background-size: cover;
     background-position: center;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+@keyframes responseApper{
+    from{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 #questions-page label{
     color:rgb(0, 0, 0);
@@ -225,7 +236,7 @@ backdrop-filter: blur(10px);
     width: 80%;
     margin: 20px auto;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
    background-image: url(./image.png/luu.jpeg);
 }
 #final-result{
@@ -241,7 +252,7 @@ backdrop-filter: blur(10px);
     background-image: url(./image.png/bluestar.jpeg);
     background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px white;
-    animation: rewardbutton 3s ease-in-out infinite;
+    animation: rewardbutton 4s ease-in-out infinite;
 }
 @keyframes rewardbutton {
     0% {
@@ -299,7 +310,7 @@ backdrop-filter: blur(10px);
     font-style: cursive;
     background-color: black;
     margin: auto;
-    text-shadow: 0 0 8px white;
+    text-shadow: 2px 2px 4px white,-2px -2px -4px white;
 }
 #restart-button{
     font-size: medium;

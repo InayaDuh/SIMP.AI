@@ -231,16 +231,25 @@ function displayPerfectDayPlan() {
 	if(answers.vaccation) {
 		recommendation += `Plan a trip to the ${answers.vaccation} for a perfect getaway! `;
 	}
-	perfectDayPlan.textContent = recommendation;	
-}
+	perfectDayPlan.innerHTML = recommendation
+		.split(". ")
+		.filter(sentence => sentence.trim() !== "")
+		.map((sentence, index) => {
+			const emojis = ["☀️", "🎼", "🍽️", "🎯", "🎥", "👥", "🐾", "🛄"];
+			return `${emojis[index] || "✨"} ${sentence.trim()}.`;
+		})
+		.join("<br>");
+
 		const showAnswersButton = document.getElementById("show-answers-button");
 		if (showAnswersButton) {
 			showAnswersButton.addEventListener("click", function () {
 				const answersContainer = document.getElementById("answers-container");
 				const answersList = document.getElementById("answers-list");
-				answersContainer.style.display = "block";displayPerfectDayPlan();setTimeout(function () {
-					window.location.href ="ending.html";
-				},5000);
+				answersContainer.style.display = "block";
+				displayPerfectDayPlan();
+				setTimeout(function () {
+					window.location.href = "ending.html";
+				}, 5000);
 				answersList.innerHTML = `
 					<p>Weather: ${answers.weather || "N/A"}</p>
 					<p>Music: ${answers.music || "N/A"}</p>
@@ -249,7 +258,7 @@ function displayPerfectDayPlan() {
 					<p>Movie: ${answers.movie || "N/A"}</p>
 					<p>Social: ${answers.social || "N/A"}</p>
 					<p>Pet: ${answers.pet || "N/A"}</p>
-					<p>Vaccation: ${answers.vaccation || "N/A"}</p>
+					<p>Vacation: ${answers.vaccation || "N/A"}</p>
 				`;
 			});
 		}
