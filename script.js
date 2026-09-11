@@ -240,6 +240,8 @@ function displayPerfectDayPlan() {
 		})
 		.join("<br>");
 
+	}
+
 		const showAnswersButton = document.getElementById("show-answers-button");
 		if (showAnswersButton) {
 			showAnswersButton.addEventListener("click", function () {
